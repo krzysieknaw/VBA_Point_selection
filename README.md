@@ -16,7 +16,7 @@ Works wyth .xyz files (space separated):
 
 ### Screenshots
 #### User Interface
-<img width="400" alt="" src="img/ui.png">
+<img width="400" alt="" src="data/selekcja_punktow_screenshot.JPG">
 
 #### Data file
 <img width="400" alt="" src="data/input_data_screenshot.JPG">
