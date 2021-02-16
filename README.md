@@ -19,4 +19,4 @@ Works wyth .xyz files (space separated):
 <img width="400" alt="" src="img/ui.png">
 
 #### Data file
-<img width="400" alt="" src="img/stock_sheet.png">
+<img width="400" alt="" src="data/input_data_screenshot.JPG">
