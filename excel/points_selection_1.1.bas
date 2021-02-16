@@ -1,4 +1,3 @@
-Attribute VB_Name = "Module1"
 Sub selekcja()
     Dim input_fullpath As String
     Dim output_name As String
@@ -23,8 +22,8 @@ Sub selekcja()
     With Application.FileDialog(msoFileDialogFilePicker)
         .Filters.Clear
         .AllowMultiSelect = False
-        .Title = "Wybór pliku"
-        .InitialFileName = "C:\Users\nk041169\Desktop\" ' zmieniæ
+        .Title = "Wybor pliku"
+        .InitialFileName = "C:\Users\nk041169\Desktop\" ' zmieniÃ¦
         .Filters.Add "Text files", "*.txt;*.csv; *.xyz", 1
         .Filters.Add "All files", "*.*"
         If .Show = -1 Then
@@ -35,17 +34,17 @@ Sub selekcja()
     
     With Application.FileDialog(msoFileDialogFolderPicker)
         .Title = "Save a folder"
-        .InitialFileName = "C:\Users\nk041169\Desktop\" ' zmieniæ
+        .InitialFileName = "C:\Users\nk041169\Desktop\" ' zmieniÃ¦
         If .Show = -1 Then
             output_fullpath = .SelectedItems(1)
         Else: GoTo error1
         End If
     End With
     
-    output_name = InputBox("Podja nazwê pliku wyjœciowego")
+output_name = InputBox("Podja nazwe pliku wyjsciowego")
     If output_name = "" Then
         output_name = "output_file"
-        MsgBox "Nie wybrano nazwy pliku. Plik zostanie zapisany pod nazw¹ output_file"
+        MsgBox "Nie wybrano nazwy pliku. Plik zostanie zapisany pod nazwa output_file"
     End If
     
     input_fileNumber = FreeFile
@@ -81,7 +80,7 @@ Sub selekcja()
             If CDbl(lineitems(1)) <= CDbl(Xmax) Then
                 If CDbl(lineitems(0)) >= CDbl(Ymin) Then
                     If CDbl(lineitems(0)) <= CDbl(Ymax) Then
-                        ' zapisz liniê do pliku
+                        ' zapisz linie do pliku
                         Write #output_fileNumber, linefromfile
                     End If
                 End If
@@ -89,13 +88,13 @@ Sub selekcja()
         End If
     Loop
 
-    MsgBox "Plik zosta³ zapisany pod nazw¹: " & output_fullpath, , "raport"
+    MsgBox "Plik zostal zapisany pod nazwa: " & output_fullpath, , "raport"
 GoTo koniec
 
 'errors
 error1:
 '    If input_fullpath = "" Then
-      MsgBox "Nie wybrano pliku. Program zostanie zakoñczony", , "OK"
+      MsgBox "Nie wybrano pliku. Program zostanie zakonczony", , "OK"
       GoTo koniec
 '    End If
     
